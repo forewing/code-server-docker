@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -yq \
 RUN locale-gen en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
 
-RUN adduser --gecos '' --disabled-password code && \
+RUN adduser --gecos '' --shell /usr/bin/bash --disabled-password code && \
     echo "code ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/nopasswd && \
     chown -R code /home/code
 VOLUME [ "/home/code" ]
