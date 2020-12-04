@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  server:
+    image: forewing/code-server
+    ports:
+      - 8080:8080
+    volumes:
+      - ./data:/home/code
+    environment:
+      - PASSWORD=
+    restart: unless-stopped
