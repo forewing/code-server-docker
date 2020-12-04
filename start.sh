@@ -7,4 +7,4 @@ do
 done
 
 # Start the server
-dumb-init /app/code-server/bin/code-server "$@"
+/app/code-server/bin/code-server "$@"

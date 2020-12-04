@@ -36,5 +36,5 @@ RUN wget -q https://github.com/cdr/code-server/releases/download/v${CODER_VERSIO
 USER code
 WORKDIR /home/code
 
-ENTRYPOINT ["/app/start.sh"]
+ENTRYPOINT ["dumb-init", "--", "/app/start.sh"]
 CMD ["--bind-addr", "0.0.0.0:8080", "--auth", "password"]
