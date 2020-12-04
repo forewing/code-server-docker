@@ -27,7 +27,7 @@ VOLUME [ "/home/code" ]
 ENV CODER_VERSION 3.7.4
 WORKDIR /app
 ADD start.sh /app
-RUN wget https://github.com/cdr/code-server/releases/download/v${CODER_VERSION}/code-server-${CODER_VERSION}-linux-amd64.tar.gz && \
+RUN wget -q https://github.com/cdr/code-server/releases/download/v${CODER_VERSION}/code-server-${CODER_VERSION}-linux-amd64.tar.gz && \
     tar -xaf code-server-*.tar.gz && \
     rm code-server-*.tar.gz && \
     mv code-server-* code-server && \
