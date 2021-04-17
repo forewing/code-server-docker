@@ -24,7 +24,7 @@ RUN adduser --gecos '' --shell /usr/bin/bash --disabled-password code && \
     chown -R code /home/code
 VOLUME [ "/home/code" ]
 
-ENV CODER_VERSION 3.9.2
+ENV CODER_VERSION 3.9.3
 WORKDIR /app
 ADD start.sh /app
 RUN wget -q https://github.com/cdr/code-server/releases/download/v${CODER_VERSION}/code-server-${CODER_VERSION}-linux-amd64.tar.gz && \
